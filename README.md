@@ -14,6 +14,9 @@ docker run -d --name ctf-cross-php --network ctf-cross-net --read-only --tmpfs /
 
 # nginx 프런트 (127.0.0.1:18166 로 노출)
 docker run -d --name ctf-cross-nginx --network ctf-cross-net -p 127.0.0.1:18166:80 -v "$PWD/nginx.conf:/etc/nginx/nginx.conf:ro" nginx:1.27-alpine
+
+# exploit
+python .\StealMyBitcoin-PoC\stealmybitcoin_poc.py --url http://127.0.0.1:18166/php-version.php
 ```
 
 ## 정리
