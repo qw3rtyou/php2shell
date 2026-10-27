@@ -1,0 +1,4 @@
+# Exclude PoC run outputs: these contain leaked target memory dumps
+# (heap.response.http) and RCE command output, which may include secrets.
+# Per the PoC author's own guidance: publish source, not run output.
+StealMyBitcoin-PoC/poc-run-*/
